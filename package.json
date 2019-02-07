@@ -14,15 +14,15 @@
     },
     "scripts": {
         "css": "node-sass ./assets/scss -o ./assets/built",
-        "css:watch": "onchange 'web/styles/**/*.scss' -v -- npm run css",
+        "css:watch": "onchange './assets/scss/**/*.scss' -v -- npm run css",
         "postcss": "postcss ./assets/built/*.css -m --use autoprefixer -d ./assets/built/",
         "js": "uglifyjs ./assets/js/* -c --source-map --output ./assets/built/main.min.js",
         "js:watch": "onchange './assets/js/*.js' -v -- npm run js",
-        "predev": "npm run css && npm run js",
-        "dev": "npm run css:watch && npm run js:watch",
-        "zip": "mkdir -p ./dist && git archive -o ./dist/barebones.zip HEAD",
+        "predev": "npm run css & npm run js",
+        "dev": "npm run css:watch & npm run js:watch",
+        "zip": "mkdir -p ./dist & git archive -o ./dist/minnie.zip HEAD",
         "test": "gscan .",
-        "sweepmac": "echo \"Removing DS_Store files\" && find . -name '.DS_Store' -type f -delete"
+        "sweepmac": "echo \"Removing DS_Store files\" & find . -name '.DS_Store' -type f -delete"
     },
     "author": {
         "name": "Mark Garrigan",
