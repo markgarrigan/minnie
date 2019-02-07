@@ -1,0 +1,22 @@
+{{#foreach posts}}
+	<article class="grid {{post_class}}">
+		<header class="post-header">
+			<div class="post-meta">
+				{{primary_author.name}} <i>/</i> {{date format="MMMM DD, YYYY"}}
+			</div>
+			{{#if primary_author.profile_image}}
+				<avatar>
+					<img src="{{primary_author.profile_image}}" alt="{{primary_author.name}}" />
+				</avatar>
+			{{/if}}
+			<h2 class="post-title">
+				<a href="{{url}}">{{{title}}}</a>
+			</h2>
+		</header>
+		<div class="post-content grid">
+			{{content}}
+		</div>
+	</article>
+{{/foreach}}
+
+{{pagination}}

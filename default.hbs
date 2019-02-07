@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="shortcut icon" href="{{asset "favicon.png"}}">
+
+		{{!-- Styles'n'Scripts --}}
+		<link rel="stylesheet" type="text/css" href="{{asset "built/main.min.css"}}" />
+
+		{{!-- This tag outputs SEO meta+structured data and other important settings --}}
+		{{ghost_head}}
+
+		{{ghost_head}}
+	</head>
+	<body class="{{body_class}}">
+
+		{{> "site-head"}}
+
+		<main>
+			{{{body}}}
+		</main>
+
+		{{ghost_foot}}
+
+		<script type="text/javascript" src="{{asset "js/main.min.js"}}"></script>
+	</body>
+</html>
