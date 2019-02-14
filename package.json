@@ -9,6 +9,7 @@
     "url": "https://markgarrigan.com"
   },
   "engines": {
+    "node": ">=8.0.0",
     "ghost": ">=2.0.0",
     "ghost-api": "v2"
   },
