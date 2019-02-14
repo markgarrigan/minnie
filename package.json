@@ -2,7 +2,7 @@
     "name": "minnie",
     "description": "Beautiful, minimal and responsive.",
     "demo": "",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
@@ -14,7 +14,7 @@
     },
     "scripts": {
         "css": "node-sass ./assets/scss -o ./assets/built",
-        "css:watch": "onchange './assets/scss/**/*.scss' -v -- npm run css",
+        "css:watch": "node-sass ./assets/scss -wro ./assets/built",
         "postcss": "postcss ./assets/built/*.css -m --use autoprefixer -d ./assets/built/",
         "js": "uglifyjs ./assets/js/* -c --source-map --output ./assets/built/main.min.js",
         "js:watch": "onchange './assets/js/*.js' -v -- npm run js",
