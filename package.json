@@ -1,81 +1,39 @@
 {
-    "name": "minnie",
-    "description": "Beautiful, minimal and responsive.",
-    "demo": "",
-    "version": "0.0.2",
-    "engines": {
-        "ghost": ">=2.0.0",
-        "ghost-api": "v2"
-    },
-    "license": "MIT",
-    "screenshots": {
-        "desktop": "",
-        "mobile": ""
-    },
-    "scripts": {
-        "css": "node-sass ./assets/scss -o ./assets/built",
-        "css:watch": "node-sass ./assets/scss -wro ./assets/built",
-        "postcss": "postcss ./assets/built/*.css -m --use autoprefixer -d ./assets/built/",
-        "js": "uglifyjs ./assets/js/* -c --source-map --output ./assets/built/main.min.js",
-        "js:watch": "onchange './assets/js/*.js' -v -- npm run js",
-        "predev": "npm run css & npm run js",
-        "dev": "npm run css:watch & npm run js:watch",
-        "zip": "mkdir -p ./dist & git archive -o ./dist/minnie.zip HEAD",
-        "test": "gscan .",
-        "sweepmac": "echo \"Removing DS_Store files\" & find . -name '.DS_Store' -type f -delete"
-    },
-    "author": {
-        "name": "Mark Garrigan",
-        "email": "mark@markgarrigan.com",
-        "url": "https://markgarrigan.com"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Magazine"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "ghost-theme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/markgarrigan/minnie.git"
-    },
-    "bugs": "https://github.com/markgarrigan/minnie/issues",
-    "contributors": "https://github.com/markgarrigan/minnie/graphs/contributors",
-    "devDependencies": {
-        "autoprefixer": "^9.4.7",
-        "gscan": "^2.0.0",
-        "node-sass": "^4.11.0",
-        "onchange": "^5.2.0",
-        "postcss-cli": "^6.1.1",
-        "uglify-js": "^3.4.9"
-    },
-    "config": {
-        "posts_per_page": 25,
-        "image_sizes": {
-            "xxs": {
-                "width": 30
-            },
-            "xs": {
-                "width": 100
-            },
-            "s": {
-                "width": 300
-            },
-            "m": {
-                "width": 600
-            },
-            "l": {
-                "width": 1000
-            },
-            "xl": {
-                "width": 2000
-            }
-        }
-    }
+  "name": "minnie",
+  "description": "Just what you need. Nothing more.",
+  "version": "0.0.2",
+  "license": "MIT",
+  "author": {
+    "name": "Mark Garrigan",
+    "email": "mark@markgarrigan.com",
+    "url": "https://markgarrigan.com"
+  },
+  "engines": {
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.7",
+    "gscan": "^2.0.0",
+    "node-sass": "^4.11.0",
+    "onchange": "^5.2.0",
+    "postcss-cli": "^6.1.1",
+    "uglify-js": "^3.4.9"
+  },
+  "scripts": {
+    "css": "node-sass ./assets/scss -o ./assets/built",
+    "css:watch": "node-sass ./assets/scss -wro ./assets/built",
+    "postcss": "postcss ./assets/built/*.css -m --use autoprefixer -d ./assets/built/",
+    "js": "uglifyjs ./assets/js/* -c --source-map --output ./assets/built/main.min.js",
+    "js:watch": "onchange './assets/js/*.js' -v -- npm run js",
+    "predev": "npm run css & npm run js",
+    "dev": "npm run css:watch & npm run js:watch",
+    "zip": "mkdir -p ./dist & git archive -o ./dist/minnie.zip HEAD",
+    "test": "gscan .",
+    "sweepmac": "echo \"Removing DS_Store files\" & find . -name '.DS_Store' -type f -delete"
+  },
+  "config": {
+    "posts_per_page": 25,
+    "image_sizes": {}
+  }
 }
