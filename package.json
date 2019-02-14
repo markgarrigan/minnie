@@ -27,8 +27,10 @@
     "postcss": "postcss ./assets/built/*.css -m --use autoprefixer -d ./assets/built/",
     "js": "uglifyjs ./assets/js/* -c --source-map --output ./assets/built/main.min.js",
     "js:watch": "onchange './assets/js/*.js' -v -- npm run js",
-    "predev": "npm run css & npm run js",
+    "predev": "npm run css && npm run js",
     "dev": "npm run css:watch & npm run js:watch",
+    "build": "npm run predev",
+    "prezip": "npm run build",
     "zip": "mkdir -p ./dist & git archive -o ./dist/minnie.zip HEAD",
     "test": "gscan .",
     "sweepmac": "echo \"Removing DS_Store files\" & find . -name '.DS_Store' -type f -delete"
@@ -36,5 +38,10 @@
   "config": {
     "posts_per_page": 25,
     "image_sizes": {}
-  }
+  },
+  "keywords": [
+      "ghost",
+      "theme",
+      "ghost-theme"
+  ]
 }
